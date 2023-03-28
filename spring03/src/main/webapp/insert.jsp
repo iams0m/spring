@@ -12,7 +12,7 @@
     String tel = request.getParameter("tel");
     
     //2.dao에 데이터 값을 주면서 Insert 요청하세요.(자바코드)
-    //DAO(JDBC 4단계에 의해 코딩됨. 항상 방법 동일!)
+    //DAO(JDBC 4단계에 의해 코딩됨. 항상 방법 동일)
     //Model(자바코드)
     
     //3.결과를 html에 담아서 클라이언트로 전송해주세요.(html)

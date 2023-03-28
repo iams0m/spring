@@ -8,7 +8,7 @@
 <link rel="stylesheet" type="text/css" href="resources/css/out.css">
 <style>
 button {
-	background: #3a7cba;
+	background: #2DB400;
 }
 .t1{ /* .은 클래스 선택! 여러개 선택할 때 클래스 사용  */
 	background : #89c2c9;
@@ -20,38 +20,37 @@ button {
 <body>
 <h2>회원가입 화면입니다.</h2>
 <hr>
-<form action="insert.jsp" method="get">
-<table border="1">
-		<tr>
-			<td class="t1"><b>아이디</b></td>
-			<td>
-				<input name="id">
-			</td>
-		</tr>
-		<tr>
-			<td class="t1"><b>비밀번호</b></td>
-			<td>
-				<input name="pw">
-			</td>
-		</tr>
-		<tr>
-			<td class="t1"><b>회원이름</b></td>
-			<td>
-				<input name="name">
-			</td>
-		</tr>
-		<tr>
-			<td class="t1"><b>전화번호</b></td>
-			<td>
-				<input name="tel">
-			</td>
-		</tr>
-		<tr>
-			<td colspan="2" class="t1">
-				<button><b>회원가입</b></button>
-			</td>
-		</tr>
-	</table>
+<form action="insert" method="get">
+	id : <input name="id" value="apple"><br>
+	pw : <input name="pw" value="1234"><br>
+	name : <input name="name" value="park"><br>
+	tel : <input name="tel" value="011"><br>
+	<button type="submit">서버로 전송</button>
+</form>
+<hr>
+
+<h2>회원수정 화면입니다.</h2>
+<hr>
+<form action="update" method="get">
+	id : <input name="id" value="apple"><br>
+	tel : <input name="tel" value="011"><br>
+	<button type="submit">서버로 전송</button>
+</form>
+<hr>
+
+<h2>회원탈퇴 화면입니다.</h2>
+<hr>
+<form action="delete" method="get">
+	id : <input name="id" value="apple"><br>
+	<button type="submit">서버로 전송</button>
+</form>
+<hr>
+
+<h2>회원검색 화면입니다.</h2>
+<hr>
+<form action="one" method="get">
+	id : <input name="id" value="apple"><br>
+	<button type="submit">서버로 전송</button>
 </form>
 </body>
 </html>
