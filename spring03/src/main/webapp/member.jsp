@@ -18,6 +18,15 @@ button {
 </style>
 </head>
 <body>
+<h2>로그인 화면입니다.</h2>
+<hr>
+<form action="login" method="get">
+	id : <input name="id" value="apple"><br>
+	pw : <input name="pw" value="1234"><br>
+	<button type="submit">서버로 전송</button>
+</form>
+<hr>
+
 <h2>회원가입 화면입니다.</h2>
 <hr>
 <form action="insert" method="get">
@@ -53,4 +62,5 @@ button {
 	<button type="submit">서버로 전송</button>
 </form>
 </body>
+</html>
 </html>

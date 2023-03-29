@@ -2,6 +2,7 @@ package com.multi.mvc03;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller // 스프링에서 제어하는 역할로 등록!
@@ -12,6 +13,25 @@ public class MemberController2 { //테이블 하나당 컨트롤러 하나
 	// 컨트롤 하는 기능(CRUD)
 	// 회원가입, 수정, 탈퇴, 정보검색
 
+	@RequestMapping
+	public String login(MemberVO bag) {
+		System.out.println("login요청됨.");
+		System.out.println(bag);
+		//dao를 이용해서 db처리할 예정
+		//views아래로 넘어가게 되어있음
+		//views아래 login.jsp를 호출하게 됌.
+		System.out.println(dao);
+		int result = dao.login(bag);//1,0
+		if(result == 1) {
+			return "ok"; //views아래 파일이름.jsp
+		}else {
+			//views아래가 아니고, webapp아래
+			//member.jsp로 가고 싶은 경우
+			//redirect : webapp밑에 가서 jsp파일을 찾음
+			return "redirect:member.jsp";
+		}
+	}
+	
 	// 클래스 내에서 기능처리 담당
 	// 멤버변수 + 멤버메서드(기능처리 담당)
 	// 하나의 요청당 하나의 메서드
@@ -51,10 +71,14 @@ public class MemberController2 { //테이블 하나당 컨트롤러 하나
 	}
 
 	@RequestMapping("one")
-	public void one(MemberVO bag) {
+	public void one(String id, Model model) {
 		System.out.println("one요청됨.");
-		System.out.println(bag);
-		System.out.println(dao);
+		System.out.println(id);
+		MemberVO bag = dao.one(id);
+		//bag에 검색결과 다 들어있음.
+		//views아래 one.jsp로 쓸 수 있도록 설정
+		model.addAttribute("bag", bag);
+		//views까지 전달할 속성으로 추가해주세요.
 	}
 
 	@RequestMapping("list")

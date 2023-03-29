@@ -21,7 +21,7 @@ button {
 </style>
 </head>
 <body>
-<h2>게시판 작성 화면입니다.</h2>
+<h2><b>게시판 작성 화면입니다.</b></h2>
 <hr>
 <form action="insert2.multi" method="get">
 	title : <input name="title" value="1234"><br>
@@ -31,7 +31,7 @@ button {
 </form>
 <hr>
 
-<h2>게시판 수정 화면입니다.</h2>
+<h2><b>게시판 수정 화면입니다.</b></h2>
 <hr>
 <form action="update2.multi" method="get">
 	no : <input name="no" value="1"><br>
@@ -40,7 +40,7 @@ button {
 </form>
 <hr>
 
-<h2>게시판 삭제 화면입니다.</h2>
+<h2><b>게시판 삭제 화면입니다.</b></h2>
 <hr>
 <form action="delete2.multi" method="get">
 	no : <input name="no" value="1"><br>
@@ -48,7 +48,7 @@ button {
 </form>
 <hr>
 
-<h2>게시판 검색 화면입니다.</h2>
+<h2><b>게시판 검색 화면입니다.</b></h2>
 <hr>
 <form action="one2.multi" method="get">
 	no : <input name="no" value="1"><br>

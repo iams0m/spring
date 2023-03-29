@@ -7,11 +7,11 @@
 <title>Insert title here</title>
 <style>
 body{
-	background: #6ce6a7;
+	background: #6cb3e6;
 }
 </style>
 </head>
 <body>
-<h3>게시판 작성이 완료되었습니다.</h3>
+<h2>북마크가 삭제되었습니다.</h2>
 </body>
 </html>

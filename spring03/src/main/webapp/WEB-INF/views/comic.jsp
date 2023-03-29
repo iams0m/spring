@@ -5,13 +5,9 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<style>
-body{
-	background: #6ce6a7;
-}
-</style>
 </head>
 <body>
-<h3>게시판 작성이 완료되었습니다.</h3>
+<b>장르는 코미디입니다.</b><br>
+<img src="resources/img/comic.png" width="300" height="200">
 </body>
 </html>

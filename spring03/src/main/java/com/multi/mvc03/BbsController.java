@@ -2,6 +2,7 @@ package com.multi.mvc03;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
@@ -29,8 +30,10 @@ public class BbsController {
 		dao.delete(no);
 	}
 	@RequestMapping("one2.multi")
-	public void one(int no) {
+	public void one(int no, Model model) {
 		System.out.println("one요청됨.");
 		System.out.println(no);
+		BbsVO bag = dao.one(no);
+		model.addAttribute("bag", bag);
 	}
 }

@@ -12,6 +12,11 @@ body{
 </style>
 </head>
 <body>
-게시판 검색 처리 요청이 완료되었습니다.
+<h3>게시판 검색 처리 요청이 완료되었습니다.</h3>
+<hr>
+<b>no >></b> ${bag.no}<br> <!-- 출력용(expression language-EL) -->
+<b>title >></b> ${bag.title}<br>
+<b>content >></b> ${bag.content}<br>
+<b>writer >></b> ${bag.writer}
 </body>
 </html>
