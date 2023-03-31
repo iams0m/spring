@@ -8,7 +8,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-<link rel="stylesheet" type="text/css" href="resources/css/out.css">
 <style>
 button {
 	background: #2DB400;
@@ -21,16 +20,17 @@ button {
 </style>
 </head>
 <body>
-<h2><b>게시판 작성 화면입니다.</b></h2>
+<%-- 현재 게시물 조회수 ${count}<br> --%>
+<% if(session.getAttribute("id") != null){ %>
+<h2><b>게시물 등록 화면입니다.</b></h2>
 <hr>
 <form action="insert2.multi" method="get">
 	title : <input name="title" value="1234"><br>
 	content : <input name="content" value="park"><br>
-	writer : <input name="writer" value="011"><br>
+	writer : <input name="writer" value="${id}"><br>
 	<button type="submit" class="btn btn-success">서버로 전송</button>
 </form>
 <hr>
-
 <h2><b>게시판 수정 화면입니다.</b></h2>
 <hr>
 <form action="update2.multi" method="get">
@@ -43,16 +43,20 @@ button {
 <h2><b>게시판 삭제 화면입니다.</b></h2>
 <hr>
 <form action="delete2.multi" method="get">
-	no : <input name="no" value="1"><br>
+	no : <input name="no" value="1">
 	<button type="submit" class="btn btn-success">서버로 전송</button>
 </form>
 <hr>
-
+<%}else{ %>
+<br><a href="login.jsp">
+<button style="background: #FA8072;">로그인</button>
+</a>
+<%} %>
 <h2><b>게시판 검색 화면입니다.</b></h2>
 <a href="list2.multi">모든 게시글 가져오기</a>
 <hr>
 <form action="one2.multi" method="get">
-	no : <input name="no" value="1"><br>
+	no : <input name="no" value="1">
 	<button type="submit" class="btn btn-success">서버로 전송</button>
 </form>
 </body>

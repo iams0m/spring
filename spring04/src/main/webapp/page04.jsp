@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 <style>
 body{
-background: #9FE2BF
+background: #F5DEB3
 }
 </style>
 </head>
