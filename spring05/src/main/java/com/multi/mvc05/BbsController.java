@@ -23,14 +23,15 @@ public class BbsController {
 		System.out.println(dao);
 		dao.insert(bag);
 	}
+	
 	@RequestMapping("update2.multi")
-	public void update(BbsVO bag) {
+	public void update(BbsVO bag, BbsDAO dao) {
 		System.out.println("update요청됨.");
 		System.out.println(bag);
 		dao.update(bag);
 	}
 	@RequestMapping("delete2.multi")
-	public void delete(int no) {
+	public void delete(int no, BbsDAO dao) {
 		System.out.println("delete요청됨.");
 		System.out.println(no);
 		dao.delete(no);
@@ -39,9 +40,9 @@ public class BbsController {
 	public void one(int no, Model model) {
 		System.out.println("one요청됨.");
 		System.out.println(no);
-		BbsVO bag = dao.one(no);
+		BbsVO bag = dao.one(no); //상세 페이지
 		//bbs상세페이지 만들 때 reply list도 함께 가지고 와야함
-		ArrayList<ReplyVO> list = dao2.list(no);
+		ArrayList<ReplyVO> list = dao2.list(no); //댓글 리스트
 		model.addAttribute("list", list);
 		model.addAttribute("bag", bag);
 	}
@@ -50,5 +51,23 @@ public class BbsController {
 		System.out.println("list요청됨.");
 		ArrayList<BbsVO> list = dao.list();
 		model.addAttribute("list", list);
+	}
+	@RequestMapping("list5")
+	public void list5(Model model) {
+		ArrayList<BbsVO> list = dao.list();
+		model.addAttribute("list", list);
+	}
+	@RequestMapping("list8")
+	public void list8(String writer, Model model) {
+		System.out.println(writer);
+		ArrayList<BbsVO> list = dao.list(writer);
+		model.addAttribute("list", list);
+	}
+	
+	@RequestMapping("one6")
+	public void one5(int no, Model model) {
+		System.out.println(no);
+		BbsVO bag = dao.one(no);
+		model.addAttribute("bag", bag);
 	}
 }
