@@ -37,15 +37,16 @@ td {
 				success : function(json) {
 					$('#result').empty()
 					$('#result').append("<b><h2>Table</h2></b>")
-					$('#result').append("<table><tr><th>아이디</th><th>비밀번호</th><th>이름</th><th>전화번호</th></tr>")
-					for (i = 0; i < json.length; i++){
-						$('#result').append("<tr><td>" + json[i].id + "</td><td>" + json[i].pw + "</td><td>" + json[i].name + "</td><td>" + json[i].tel + "</td></tr>"
-						) //result
-					} //for
-					$('#result').append("</table>")
+					id = json.id
+					pw = json.pw
+					name = json.name
+					tel = json.tel
+					table = "<table><tr><th>아이디</th><th>비밀번호</th><th>이름</th><th>전화번호</th></tr>" + 
+					"<tr><td>" + id + "</td><td>" + pw + "</td><td>" + name + "</td><td>" + tel + "</td></tr></table>"
+					$('#result').append(table)
 				} //success
 			}) //ajax
-		})//b3
+		})//b1
 		$('#b2').click(function() {
 			$.ajax({
 				url : "jsonResponse4",
