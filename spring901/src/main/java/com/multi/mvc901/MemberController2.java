@@ -1,5 +1,7 @@
 package com.multi.mvc901;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -39,6 +41,8 @@ public class MemberController2 {
 		System.out.println("one요청됨.");
 		System.out.println(id);
 		MemberVO bag = dao.one(id);
+		//views 아래 one.jsp까지 전달할 데이터를 model 객체를 이용해서
+		//속성으로 지정합니다.
 		model.addAttribute("bag", bag);
 	}
 	
@@ -57,8 +61,8 @@ public class MemberController2 {
 	@RequestMapping("list")
 	public void list(Model model) {
 		//Model은 컨트롤러의 list를 views/list.jsp까지만 전달할 수 있는 객체 
-		//ArrayList<MemberVO> list = dao.list();
-		//model.addAttribute("list", list);
+		List<MemberVO> list = dao.list();
+		model.addAttribute("list", list);
 	}
 	
 	//https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=1&ie=utf8&query=%EC%9E%90%EB%8F%99%EC%B0%A8

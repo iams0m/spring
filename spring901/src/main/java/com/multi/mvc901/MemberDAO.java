@@ -1,5 +1,7 @@
 package com.multi.mvc901;
 
+import java.util.List;
+
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -57,5 +59,10 @@ public class MemberDAO {
 	public MemberVO one(String id) {
 		MemberVO bag = my.selectOne("member.one", id);
 		return bag;
+	}
+	
+	public List<MemberVO> list() {
+		List<MemberVO> list = my.selectList("member.all");
+		return list;
 	}
 }

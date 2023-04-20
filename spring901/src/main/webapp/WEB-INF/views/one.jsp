@@ -7,7 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h3>회원검색 처리 요청이 완료되었습니다.</h3><br>
+<h3>회원검색 처리 요청이 완료되었습니다.</h3>
+<hr>
 <!-- bag.getId() -->
 <!-- model의 속성으로 전달받은 bag은 EL로 출력 -->
 <!-- EL : 속성으로 지정한 값 꺼내서 출력 -->

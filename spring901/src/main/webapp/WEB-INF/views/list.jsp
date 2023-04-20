@@ -17,6 +17,8 @@
 		} 
 -->
 <c:forEach items="${list}" var="bag">
+<!-- items : 뭘 가지고 foreach문 돌릴래 ? => EL로 작성해야합니다. 
+bag 꺼내어 list에 있는 거 돌려주세요. -->
 <%-- <c:forEach items="${list}" var="bag" begin="1" end="3" step="2"> --%>
 <b>검색 id >></b> ${bag.id}<br> <!-- 출력용(expression language-EL) -->
 <b>검색 pw >></b> ${bag.pw}<br>

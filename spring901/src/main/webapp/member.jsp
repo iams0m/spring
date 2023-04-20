@@ -49,7 +49,7 @@ button {
 <h2>회원탈퇴 화면입니다.</h2>
 <hr>
 <form action="delete" method="get">
-	id : <input name="id" value="apple"><br>
+	id : <input name="id" value="kakao"><br>
 	<button type="submit">서버로 전송</button>
 </form>
 <hr>
