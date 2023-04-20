@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="festa">
+	<!-- insert, delete, update의 결과 타입은 무조건 resultType=”int” 이므로 
+	프로그래머가 써주지 않아도 이미 resultType=”int”가 있는 것으로 봄. -->
+	<insert id="create" parameterType="festaVO">
+		insert into festa values (#{img}, #{title}, #{brief_contents}, #{area}, #{date}, #{detail})
+	</insert>
+	
+	<delete id="del"  parameterType="String">
+		delete from festa where title = #{title}
+	</delete>
+	
+	<update id="up"  parameterType="festaVO">
+		update festa set area = #{area} where title = #{title}
+	</update>
+	
+	<select id="one" parameterType="String" resultType="festaVO">
+		select * from festa where title = #{title}
+	</select>
+	
+	<select id="all" parameterType="festaVO" resultType="festaVO">
+		select * from festa
+	</select>
+	
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
