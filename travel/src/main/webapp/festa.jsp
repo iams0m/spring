@@ -21,7 +21,7 @@ button {
 <a href="list" style="text-decoration: none; color: black;"><b>전체</b></a>
 <hr>
 <form action="one" method="get">
-	title : <input name="no" value="어떤 축제를 찾으시나요?">
+	title : <input name="no" placeholder="어떤 축제를 찾으시나요?">
 	<button type="submit">검색</button>
 </form>
 </body>
