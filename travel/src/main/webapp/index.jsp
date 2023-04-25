@@ -30,8 +30,8 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto py-4 py-lg-0">
                         <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="index.jsp">전체</a></li>
-                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="about.jsp">About</a></li>
-                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="contact.jsp">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="about.jsp">지역별</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="contact.jsp">즐겨찾기</a></li>
                     </ul>
                 </div>
             </div>
@@ -42,7 +42,7 @@
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-md-10 col-lg-8 col-xl-7">
                         <div class="site-heading">
-                            <h1>부산경남 축제정보</h1>
+                            <h1>부산경남 축제 정보</h1>
                             <span class="subheading">부산경남 축제 정보를 한눈에 살펴보아요!</span>
                         </div>
                     </div>
@@ -68,7 +68,7 @@
                     <hr class="my-4" />
                     <!-- Post preview-->
                     <div class="post-preview">
-                        <a href="post.jsp">
+                        <a href="post2.jsp">
                             <h2 class="post-title">진주남강유등축제</h2>
                             <h3 class="post-subtitle">천년의 강, 남강에 평화를 담다</h3>
                         </a>
@@ -81,7 +81,7 @@
                     <hr class="my-4" />
                     <!-- Post preview-->
                     <div class="post-preview">
-                        <a href="post.jsp">
+                        <a href="post3.jsp">
                             <h2 class="post-title">창녕 낙동강 유채축제</h2>
                             <h3 class="post-subtitle">전국 단일면적 최대 규모 유채꽃이 어우러진 대한민국 대표 명품 봄꽃축제</h3>
                         </a>
@@ -94,14 +94,13 @@
                     <hr class="my-4" />
                     <!-- Post preview-->
                     <div class="post-preview">
-                        <a href="post.jsp">
-                            <h2 class="post-title">Failure is not an option</h2>
-                            <h3 class="post-subtitle">Many say exploration is part of our destiny, but it’s actually our duty to future generations.</h3>
+                        <a href="post4.jsp">
+                            <h2 class="post-title">국제게임전시회 지스타</h2>
+                            <h3 class="post-subtitle">국제게임전시회</h3>
                         </a>
                         <p class="post-meta">
-                            Posted by
-                            <a href="#!">Start Bootstrap</a>
-                            on July 8, 2023
+                            부산 해운대구  
+                             2023. 11. 16. ~ 2023. 11. 19.
                         </p>
                     </div>
                     <!-- Divider-->
