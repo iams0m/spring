@@ -1,2 +1,2 @@
 # 🐙spring
-### spring 연습 코드입니다.
+### spring 연습코드입니다.
